@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+
+body{
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.tab-head-1{
+    background: #d00000;
+}
+
+.tab-head-2{
+    background: #0b5351;
+}
+
+.tab-head-3{
+    background: #ffba08;
+}
+
+.tab-head-4{
+    background: #3f88c5;
+}
+
+.tab{
+    flex: 0 0 80%;
+}
+
+.tab-head{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.tab-head-content{
+    padding: 20px 15px;
+    font-size: 1.3rem;
+    position: relative;
+    transition: background 0.5s linear;
+}
+
+.tab-head-content:hover{
+    background: #f2f2f2;
+}
+
+.tab-head-content:hover a{
+    color: #000;
+}
+
+.tab-body-content{
+    background: #f7f7f7;
+    padding: 30px;
+    margin: 20px 0;
+    display: none;
+}
+
+.tab-body-content h2, p{
+    padding: 15px 0;
+}
+
+/****************************/
+
+.active-border::after{
+    content: "";
+    position: absolute;
+    background: #000;
+    height: 2px;
+    top: 75px;
+    width: 50%;
+    opacity: 0.5;
+    box-shadow: 0 1px 2px grey;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* This class will be used in JavaScript */
+
+.active-content{
+    display: block;
+}
+
+@media(max-width: 992px){
+    .tab-head{
+        grid-template-columns: 1fr;
+    }
+
+    .tab-head-content{
+        margin: 10px 0;
+    }
+}
